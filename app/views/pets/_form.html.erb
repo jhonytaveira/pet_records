@@ -1,0 +1,44 @@
+<%= simple_form_for(@pet) do |f| %>
+  <div class="col-11 no-padding ml-4">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group row mb-4">
+          <div class="col-md-12">
+            <%= f.input :name, input_html: { class: 'form-control' } %>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group row mb-4">
+          <div class="col-md-12">
+            <%= f.input :birth_date, as: :string, input_html: { class: 'date form-control' } %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <div class="form-group row mb-4">
+          <div class="col-md-12">
+            <%= f.input :breed, as: :string,
+                        input_html: { class: 'form-control' } %>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="form-group row mb-4">
+          <div class="col-md-12">
+            <%= f.input :kind, collection: Pet.kind.options,
+                        input_html: { class: 'form-control' } %>
+          </div>
+        </div>
+      </div>
+    </div><br><br>
+    <div class="actions">
+      <%= f.button :submit, 'Salvar', class: 'btn btn-primary' %>
+      <%= link_to 'Voltar', pets_path, class: 'btn btn-warning' %>
+    </div>
+  </div>
+<% end %>
