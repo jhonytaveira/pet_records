@@ -1,0 +1,30 @@
+<% content_for(:action_human_name) do %>
+  <%= t('.title', name: @pet.name) %>
+<% end %>
+
+<div class="row">
+  <% @medical_records.each do |medical_record| %>
+    <div class="col-md-6 mb-2">
+      <div class="card">
+        <div class="card-header">
+          <%= MedicalRecord.human_attribute_name :id %>: <%= medical_record.id %>
+        </div>
+        <div class="card-body">
+          <p>
+            <strong><%= MedicalRecord.human_attribute_name :patient_symptoms %>:</strong>
+            <%= medical_record.patient_symptoms %>
+          </p>
+
+          <p>
+            <strong><%= MedicalRecord.human_attribute_name :treatment %>:</strong>
+            <%= medical_record.treatment %>
+          </p>
+        </div>
+        <br>
+      </div>
+    </div>
+  <% end %>
+</div><br>
+<div class="actions">
+  <%= link_to 'Voltar', '/', class: 'btn btn-warning' %>
+</div>
