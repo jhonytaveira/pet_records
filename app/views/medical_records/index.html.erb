@@ -1,0 +1,35 @@
+<% content_for(:action_human_name) do %>
+  <%= t('.title') %>
+<% end %>
+
+<div class="card mb-4">
+  <div class="card-block">
+    <%= render 'search' %>
+
+    <div class="table-responsive">
+      <table class="table table-striped text-">
+        <thead>
+          <tr>
+            <th class="text-primary"><%= MedicalRecord.human_attribute_name(:patient_symptoms) %></th>
+            <th class="text-primary"><%= MedicalRecord.human_attribute_name(:treatment) %></th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @medical_records.each do |medical_record| %>
+            <tr>
+              <td><%= medical_record.patient_symptoms %></td>
+              <td><%= medical_record.treatment %></td>
+              <td>
+                <%= link_to medical_record, method: :delete, data: { confirm: 'Tem certeza?' }, title: 'Apagar' do %>
+                  <i class="fa fa-trash text-danger margin-b-5" style="font-size: 20px"></i>
+              <% end %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

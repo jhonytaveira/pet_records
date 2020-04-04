@@ -1,0 +1,17 @@
+<%= search_form_for @q do |f| %>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group row mb-4">
+        <div class="col-md-12">
+          <%= f.select :pet_id_eq,
+                       Pet.all.map{ |a| [a.name, a.id] }.to_a.insert(0, ['Todos Pets', 'all']),
+                       {}, class: 'form-control select' %>
+        </div>
+      </div>
+    </div>
+    <div>
+      <%= f.submit class: 'btn btn-primary btn-sm font-weight-bold' %>
+    </div>
+  </div>
+  <br>
+<% end %>
