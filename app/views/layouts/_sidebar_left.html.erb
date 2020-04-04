@@ -1,0 +1,34 @@
+<nav class="sidebar col-xs-12 col-sm-4 col-lg-3 col-xl-2">
+  <h1 class="site-title"><a href="">
+    Prontuário de Pets</a>
+  </h1><br>
+
+  <ul class="nav nav-pills flex-column sidebar-nav">
+    <li class="nav-item">
+      <%= link_to '/',
+                  class: "nav-link #{current_page?('/') && 'active'}", title: 'Home' do %>
+        <em class="fa fa-h-square"></em>ome</a>
+      <% end %>
+    </li>
+
+    <li class="nav-item">
+      <%= link_to new_pet_path,
+                  class: "nav-link #{current_page?(new_pet_path) && 'active'}" do %>
+        <em class="fa fa-paw"></em>Criar Pet</a>
+      <% end %>
+    </li>
+
+    <li class="nav-item">
+      <%= link_to new_medical_record_path,
+                  class: "nav-link #{current_page?(new_medical_record_path) && 'active'}" do %>
+        <em class="fa fa-plus"></em>Prontuário</a>
+      <% end %>
+    </li>
+    <li class="nav-item">
+      <%= link_to medical_records_path,
+                  class: "nav-link #{current_page?(medical_records_path) && 'active'}" do %>
+        <em class="fa fa-list"></em>Listar Prontuários</a>
+      <% end %>
+    </li>
+  </ul>
+</nav>

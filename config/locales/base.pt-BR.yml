@@ -1,0 +1,35 @@
+pt-BR:
+  medical_records:
+    new:
+      title: Novo Prontuário
+    index:
+      title: Lista de Prontuários
+    edit:
+      title: Editar Aluno
+    create:
+      messages:
+        success: Prontuário criado com sucesso.
+    destroy:
+      messages:
+        success: Prontuário apagado com sucesso.
+  pets:
+    create:
+      messages:
+        success: Pet criado com sucesso.
+    new:
+      title: Novo Pet
+    index:
+      title: Pets
+    medical_records:
+      title: 'Prontuários: Pet(%{name})'
+  home:
+    index:
+      title: Pets
+
+  enumerize:
+    pet:
+      kind:
+        dog: Cachorro
+        cat: Gato
+
+

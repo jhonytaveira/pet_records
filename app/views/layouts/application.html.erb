@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pet Records</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+    <div class="container-fluid" id="wrapper">
+      <div class="row">
+        <%= render 'layouts/sidebar_left' %>
+        <main class="col-xs-12 col-sm-8 col-lg-9 col-xl-10 pt-3 pl-4 ml-auto">
+          <header class="page-header">
+            <% if flash.any? %>
+              <section class="content-header">
+                <%= render 'layouts/flash_messages' %>
+              </section>
+              <br>
+            <% end %>
+            <h3 class="text-black-50"><%= yield(:action_human_name) %></h3>
+            <div class="clear"></div>
+          </header>
+          <section class="row">
+            <div class="col-sm-12">
+              <section class="row">
+                <div class="col-md-12 col-lg-12">
+                  <div id="modal-holder"></div>
+                  <%= yield %>
+                </div>
+              </section>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

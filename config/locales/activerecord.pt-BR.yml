@@ -1,0 +1,15 @@
+pt-BR:
+  activerecord:
+    attributes:
+      medical_record:
+        id: Código
+        patient_symptoms: Sintomas do paciente
+        treatment: Tratamento aplicado ao paciente
+      pet:
+        name: Nome
+        birth_date: Data de Nascimento
+        breed: Raça
+        kind: Tipo
+
+
+
