@@ -1,0 +1,14 @@
+Developed features
+
+1 - Home for pet list and your medical records.
+2 - Page that creates pet.
+3 - Page that lists medical records and allows delete medical records.
+4 - Page that creates medical records by the pet.
+5 - Lists pets and your medical records through endpoints.
+
+
+Possible Improvements
+
+1 - Add login screen.
+2 - authorizations by users.
+3 - Add responsible for the pet.
