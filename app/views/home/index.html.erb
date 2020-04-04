@@ -1,0 +1,37 @@
+<% content_for(:action_human_name) do %>
+  <%= t('.title') %>
+<% end %>
+
+<div class="card mb-4">
+  <div class="card-block">
+    <div class="table-responsive">
+      <table class="table table-striped text-">
+        <thead>
+          <tr>
+            <th class="text-primary"><%= Pet.human_attribute_name(:name) %></th>
+            <th class="text-primary"><%= Pet.human_attribute_name(:birth_date) %></th>
+            <th class="text-primary"><%= Pet.human_attribute_name(:breed) %></th>
+            <th class="text-primary"><%= Pet.human_attribute_name(:kind) %></th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @pets.each do |pet| %>
+            <tr>
+              <td><%= pet.name %></td>
+              <td><%= pet.birth_date && I18n.l(pet.birth_date) %></td>
+              <td><%= pet.breed %></td>
+              <td><%= pet.kind_text %></td>
+              <td>
+                <%= link_to medical_records_pets_path(pet_id: pet), title: 'Prontuários' do %>
+                  <i class="fa fa-medkit margin-b-5 text-success" style="font-size: 22px"></i>
+                <% end %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
