@@ -4,8 +4,6 @@ pt-BR:
       title: Novo Prontuário
     index:
       title: Lista de Prontuários
-    edit:
-      title: Editar Aluno
     create:
       messages:
         success: Prontuário criado com sucesso.
@@ -31,5 +29,3 @@ pt-BR:
       kind:
         dog: Cachorro
         cat: Gato
-
-
