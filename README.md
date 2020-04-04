@@ -1,24 +1,38 @@
-# README
+# Pet-Records
+&nbsp;
+### Installation
+   [postgresql](https://www.postgresql.org/) version 9+
+ 
+   Ruby version 2.5.3
+ 
+   Rails version 5.2.4
+ 
+```sh
+git clone git@github.com:jhonytaveira/pet_records.git
+cd pet_records/
+bundle install
+```
+>
+> Configure database.yml with your credentials. You can use database.sample.yml as example
+>
+```sh
+rake db:create
+rake db:migrate
+```
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```sh
+rails s
+```
+&nbsp;
+&nbsp;
 
-Things you may want to cover:
+# running tests
 
-* Ruby version
+>
+> https://chromedriver.chromium.org/downloads For test features, you must install chromedriver and compatible chrome version
+> 
+>
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```sh
+rspec spec/
+```
